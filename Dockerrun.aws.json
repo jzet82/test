@@ -4,7 +4,7 @@
     {
       "name": "php-app",
       "host": {
-        "sourcePath": "/var/app/current/php-app"
+        "sourcePath": "/var/app/current"
       }
     },
     {
@@ -55,7 +55,7 @@
     },
     {
       "name": "php-app",
-      "image": "411283639275.dkr.ecr.eu-west-2.amazonaws.com/docker_mf2-com-php",
+      "image": "050415999909.dkr.ecr.eu-central-1.amazonaws.com/docker_mf2-com-php",
       "essential": true,
       "memory": 256,
       "links": [

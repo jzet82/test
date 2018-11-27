@@ -21,3 +21,6 @@ app/etc/
 !proxy/**
 !php-app/
 !php-app/**
+!pub/
+!pub/**
+!auth.json

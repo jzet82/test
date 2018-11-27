@@ -12,3 +12,5 @@ app/functions.php
 app/etc/
 !tools/
 !tools/**
+!eb/
+!eb/**

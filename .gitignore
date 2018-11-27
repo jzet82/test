@@ -14,3 +14,10 @@ app/etc/
 !tools/**
 !eb/
 !eb/**
+!.ebextensions/
+!.ebextensions/**
+!Dockerrun.aws.json
+!proxy/
+!proxy/**
+!php-app/
+!php-app/**

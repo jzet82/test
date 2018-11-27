@@ -1,0 +1,48 @@
+version: '2'
+
+services:
+  mf2-com-nginx:
+    image: nginx:alpine
+    container_name: mf2-com-nginx
+    links:
+      - mf2-com-php
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./logs/nginx:/var/log/nginx
+      - ./conf/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    volumes_from:
+      - mf2-com-php
+
+  mf2-com-php:
+    build: images/php-7.1-fpm
+    container_name: mf2-com-php
+    links:
+      - mf2-com-db
+      - mf2-com-redis
+    volumes:
+      - ../../:/var/www/html
+    env_file: env/php.env
+
+  mf2-com-db:
+    image: mariadb:10
+    container_name: mf2-com-db
+    restart: always
+    ports:
+      - "3306:3306"
+    env_file: env/db.env
+
+  mf2-com-redis:
+    image: redis:alpine
+    container_name: mf2-com-redis
+    ports:
+      - "6379:6379"
+
+  mf2-com-sync:
+    build:
+      context: .
+      dockerfile: images/sync/Dockerfile
+    container_name: mf2-com-sync
+    volumes:
+      - ../../pub/media:/synchronised/media

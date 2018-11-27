@@ -1,0 +1,14 @@
+*
+!.gitignore
+!README.md
+!composer.json
+!composer.lock
+!app/
+!app/**
+app/.htaccess
+app/autoload.php
+app/bootstrap.php
+app/functions.php
+app/etc/
+!tools/
+!tools/**

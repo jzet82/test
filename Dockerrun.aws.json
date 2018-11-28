@@ -19,7 +19,7 @@
       "name": "mysql",
       "image": "mariadb:10",
       "essential": true,
-      "memory": 128,
+      "memory": 126,
       "portMappings": [
         {
           "hostPort": 3306,
@@ -45,7 +45,7 @@
       "name": "redis",
       "image": "redis",
       "essential": true,
-      "memory": 512,
+      "memory": 126,
       "portMappings": [
         {
           "hostPort": 6379,
@@ -57,7 +57,7 @@
       "name": "php-app",
       "image": "050415999909.dkr.ecr.eu-central-1.amazonaws.com/docker_mf2-com-php",
       "essential": true,
-      "memory": 1024,
+      "memory": 126,
       "links": [
         "mysql",
         "redis"
@@ -74,7 +74,7 @@
       "name": "nginx-proxy",
       "image": "nginx",
       "essential": true,
-      "memory": 512,
+      "memory": 126,
       "portMappings": [
         {
           "hostPort": 80,

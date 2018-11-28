@@ -19,3 +19,4 @@ app/etc/
 !proxy/**
 !pub/
 !pub/index.php
+!buildspec.yml

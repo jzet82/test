@@ -2,4 +2,5 @@ version: 0.1
 phases:
   pre_build:
     commands:
-    - composer install
+    - mv tools/docker/images/php-7.1-fpm/composer/auth.json ~/.composer/auth.json
+    - composer install --ignore-platform-reqs
